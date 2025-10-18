@@ -26,7 +26,7 @@ OPENAI_API_KEY=...
 # ou
 # GOOGLE_API_KEY=...
 
-# Postgres
+# Configuração do banco de dados - Opção 1: Variáveis individuais
 PG_HOST=localhost
 PG_PORT=5432
 PG_DB=rag
@@ -34,9 +34,14 @@ PG_USER=postgres
 PG_PASSWORD=postgres
 PG_COLLECTION=documents
 
+# Configuração do banco de dados - Opção 2: String de conexão completa
+# DATABASE_URL=postgresql+psycopg://postgres:postgres@localhost:5432/rag
+
 # PDF (opcional; padrão: ./document.pdf)
 PDF_PATH=./document.pdf
 ```
+
+**Nota sobre configuração do banco:** Você pode usar tanto as variáveis individuais (`PG_HOST`, `PG_PORT`, etc.) quanto a variável `DATABASE_URL` completa. Se usar `DATABASE_URL`, certifique-se de que ela contenha a string de conexão completa no formato `postgresql+psycopg://usuario:senha@host:porta/database`.
 
 ## Subir banco de dados
 ```bash
