@@ -93,7 +93,7 @@ def search_prompt(question: Optional[str] = None):
 
     def _run(q: str) -> str:
         # Retrieve top-k with scores
-        results = vectorstore.similarity_search_with_score(q, k=20)
+        results = vectorstore.similarity_search_with_score(q, k=10)
         if not results:
             return "Não tenho informações necessárias para responder sua pergunta."
 
